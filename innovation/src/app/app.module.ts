@@ -38,9 +38,8 @@ import { TimelineServiceService } from '../app/widgets/timeline/timeline-service
     MatButtonModule,
     MatDialogModule
   ],
-  entryComponents: [EventDialogBox],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ClickableEventComponent, TimelineDateComponent, BarComponent]
+  entryComponents: [ClickableEventComponent, TimelineDateComponent, BarComponent, EventDialogBox]
 })
 export class AppModule { }
