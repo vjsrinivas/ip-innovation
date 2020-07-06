@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AdminComponent implements OnInit {
 
   userData: any = [
-    {name: "Vicki", badge:"imaage1"},
-    {name: "Vicki", badge:"image2"},
-    {name: "Vicki", badge:"image3"},
+    {name: "Vicki", badge1:"imaage1"},
+    {name: "Vicki", badge1:"image2"},
+    {name: "Vicki", badge1:"image3"},
     
   ]
 
