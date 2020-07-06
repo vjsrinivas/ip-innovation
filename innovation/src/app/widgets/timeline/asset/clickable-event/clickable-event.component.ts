@@ -14,7 +14,6 @@ export class ClickableEventComponent implements OnInit {
   }
 
   openModel() {
-    // Trigger dialog open here!!!!
     console.log(this.eventInstance);
   }
 }
