@@ -1,15 +1,24 @@
 <h1>Admin Page</h1>
 
-<img src="../../../assets/IP_Logo.png" alt="IP" sizes="30px">
+<!--img src="../../../assets/IP_Logo.png" alt="IP" sizes="30px"-->
+<br>
 
 <div>
     <table>
         <thead>
             <tr>
                 <th>Username</th>
-                <th>Badge 1</th>
+                <th contenteditable="true">Badge 1</th>
                 <th>Badge 2</th>
                 <th>Badge 3</th>
+                <th>Badge 4</th>
+                <th>Badge 5</th>
+                <th>Badge 6</th>
+                <th>Badge 7</th>
+                <th>Badge 8</th>
+                <th>Badge 9</th>
+                <th>Badge 10</th>
+
             </tr>        
 
         </thead> 
@@ -17,8 +26,19 @@
         <tbody>
             <tr *ngFor = "let data of userData">
                 <td> {{data.name}} </td>
-                <td> {{data.badge1}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge1}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge2}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge3}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge4}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge5}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge6}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge7}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge8}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge9}}</td>
+                <td> <input type="checkbox" value="true" > {{data.badge10}}</td>
+
             </tr>
+
         </tbody>
 
     </table>
