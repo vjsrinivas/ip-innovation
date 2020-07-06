@@ -28,13 +28,14 @@ export class EventBoxComponent implements OnInit {
     this.eventinfo = {
       name: this.eventjson.name,
       date: this.eventjson.date,
-      description: this.eventjson.description
+      description: this.eventjson.description,
+      presenters: this.eventjson.presenters
     }
 
 
     const dialogRef = this.dialog.open(EventDialogBox,{
       width: '250px',
-      data: {name: 'Intro to AI', date: Date.now(), description: 'Lorem espum lorem ermoejioh osifj asiofa sfijas oifjas iofj'}
+      data: this.eventinfo
     })
 
     dialogRef.afterClosed().subscribe(result => {

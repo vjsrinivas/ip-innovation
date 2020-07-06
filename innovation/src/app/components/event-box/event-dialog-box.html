@@ -2,9 +2,10 @@
 <div mat-dialog-content>
     <p>Date: {{data.date}}</p>
     <p>Description: {{data.description}}</p>
-    <!-- <div *ngFor="let presenter in data.presenters">
-        <p>{{presenter.name}</p>
-    </div> -->
+    <p>Presenters</p>
+    <div *ngFor="let presenter of data.presenters">
+        <p>{{presenter.name}}</p>
+    </div>
 </div>
 <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">back</button>
