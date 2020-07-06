@@ -13,6 +13,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ExportCsvComponent } from './components/export-csv/export-csv.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
+import { EventBoxComponent, EventDialogBox } from './components/event-box/event-box.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -24,14 +26,18 @@ import { MatButtonModule } from "@angular/material/button";
     TimelineDateComponent,
     StickerComponent,
     AdminComponent,
-    ExportCsvComponent
+    ExportCsvComponent,
+    EventBoxComponent,
+    EventDialogBox
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
+  entryComponents: [EventDialogBox],
   providers: [],
   bootstrap: [AppComponent]
 })
