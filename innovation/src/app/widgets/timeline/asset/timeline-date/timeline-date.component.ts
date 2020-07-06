@@ -6,9 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./timeline-date.component.scss']
 })
 export class TimelineDateComponent implements OnInit {
-
-  @Input()
-  date: string;
+  public date: string;
 
   constructor() { }
 

@@ -13,6 +13,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { ExportCsvComponent } from './components/export-csv/export-csv.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
+import { TimelineServiceService } from '../app/widgets/timeline/timeline-service.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatButtonModule } from "@angular/material/button";
     MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ClickableEventComponent, TimelineDateComponent, BarComponent]
 })
 export class AppModule { }

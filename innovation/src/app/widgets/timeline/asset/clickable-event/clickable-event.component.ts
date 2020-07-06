@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'timeline-clickable-event',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clickable-event.component.scss']
 })
 export class ClickableEventComponent implements OnInit {
+  public eventInstance: any;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  openModel() {
+    // Trigger dialog open here!!!!
+    console.log(this.eventInstance);
+  }
 }
