@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
 import { EventBoxComponent, EventDialogBox } from './components/event-box/event-box.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TimelineServiceService } from '../app/widgets/timeline/timeline-service.service';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
   entryComponents: [EventDialogBox],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ClickableEventComponent, TimelineDateComponent, BarComponent]
 })
 export class AppModule { }

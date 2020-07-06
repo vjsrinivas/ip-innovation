@@ -13,10 +13,23 @@ export class HomeComponent implements OnInit {
 
   // Schemea Example for events (will be loaded into by MongoDB)
   // Dates will be Date type for now but might changed to Timestamp when migrating to mongodb
-  _tmp_date = new Date('9/1/2020');
   events = [
     {'name': 'Introduction into AI',
-     'date': this._tmp_date, //might change later based on mongodb datatype (timestamp), but will need to convert timestamp -> Date -> string
+     'date': new Date('9/1/2020 12:30 PM EST'), //might change later based on mongodb datatype (timestamp), but will need to convert timestamp -> Date -> string
+     'description': 'Lorem espum lorem ermoejioh osifj asiofa sfijas oifjas iofj',
+     'type': 'normal',
+     'presenters': [{'name': 'John Smith', 'avatar': 'https://via.placeholder.com/100x100'}, {'name':'Aria Sansens', 'avatar': 'https://via.placeholder.com/100x100'}],
+     'connection_type': 'webex',
+    },
+    {'name': 'Introduction into AI (Part 2)',
+     'date': new Date('9/1/2020 2:00 PM EST'), //might change later based on mongodb datatype (timestamp), but will need to convert timestamp -> Date -> string
+     'description': 'Lorem espum lorem ermoejioh osifj asiofa sfijas oifjas iofj',
+     'type': 'normal',
+     'presenters': [{'name': 'John Smith', 'avatar': 'https://via.placeholder.com/100x100'}, {'name':'Aria Sansens', 'avatar': 'https://via.placeholder.com/100x100'}],
+     'connection_type': 'vr',
+    },
+    {'name': 'Introduction into AI',
+     'date': new Date('9/1/2020 4:30 PM EST'), //might change later based on mongodb datatype (timestamp), but will need to convert timestamp -> Date -> string
      'description': 'Lorem espum lorem ermoejioh osifj asiofa sfijas oifjas iofj',
      'type': 'normal',
      'presenters': [{'name': 'John Smith', 'avatar': 'https://via.placeholder.com/100x100'}, {'name':'Aria Sansens', 'avatar': 'https://via.placeholder.com/100x100'}],
