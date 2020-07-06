@@ -1,0 +1,23 @@
+<h1>Admin Page</h1>
+
+<img src="../../../assets/IP_Logo.png" alt="IP" sizes="30px">
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Badges</th>
+            </tr>        
+
+        </thead> 
+
+        <tbody>
+            <tr *ngFor = "let data of userData">
+                <td> {{data.name}} </td>
+                <td> {{data.badge}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
