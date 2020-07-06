@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class AdminComponent implements OnInit {
 
   userData: any = [
-    {name: "Vicki Tang", badge1:" ", badge2: " ", badge3: " ", badge4: " ", badge5: " ", badge6: " ", badge7: " ", badge8: " ", badge9: " ", badge10: " "},
-    {name: "Vijay Rajagopal", badge1:" ", badge2: " ", badge3: " ", badge4: " ", badge5: " ", badge6: " ", badge7: " ", badge8: " ", badge9: " ", badge10: " "},
-    {name: "Vishal Aiely", badge1:" ", badge2: " ", badge3: " ", badge4: " ", badge5: " ", badge6: " ", badge7: " ", badge8: " ", badge9: " ", badge10: " "},
-    {name: "Khiliel Bullock", badge1:" ", badge2: " ", badge3: " ", badge4: " ", badge5: " ", badge6: " ", badge7: " ", badge8: " ", badge9: " ", badge10: " "},
-    {name: "Tiara Jefferson", badge1:" ", badge2: " ", badge3: " ", badge4: " ", badge5: " ", badge6: " ", badge7: " ", badge8: " ", badge9: " ", badge10: " "},
+    {name: "Vicki Tang", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
+    {name: "Vijay Rajagopal", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
+    {name: "Vishal Aiely", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
+    {name: "Khiliel Bullock", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
+    {name: "Tiara Jefferson", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
   
   ]
 

@@ -1,3 +1,6 @@
+h1{
+    color: white;
+}
 
 table{
     border-collapse: collapse;
@@ -18,5 +21,14 @@ table td{
 }
 
 table tr:nth-child(odd) td{
-    background-color: #e7edf0; 
+    background-color: #e2ebf0; 
+}
+
+table tr:nth-child(even) td{
+    background-color: #b3e1f8; 
+}
+
+search{
+    margin: 15px;
+    padding: 15px ;
 }
