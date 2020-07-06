@@ -23,7 +23,7 @@ export class EventBoxComponent implements OnInit {
 
   constructor(public dialog: MatDialog) {  }
 
-  openDialog(): void {
+  public openDialog(): void {
 
     this.eventinfo = {
       name: this.eventjson.name,
