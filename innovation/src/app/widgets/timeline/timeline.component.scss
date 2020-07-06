@@ -1,0 +1,12 @@
+$COMMON_HEIGHT: 3000px;
+
+#bar {
+    background-color: white;
+    width: 10px;
+    height: $COMMON_HEIGHT;
+}
+
+#circle-container {
+    position: absolute;
+    height: $COMMON_HEIGHT;
+}

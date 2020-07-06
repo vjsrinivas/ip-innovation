@@ -1,0 +1,53 @@
+$LEFT_MARGIN_MASTER: 7%;
+
+.content-master {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 75px auto;
+}
+
+.top-row {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-left: $LEFT_MARGIN_MASTER;
+}
+
+.timeline-container::-webkit-scrollbar {
+    display: none;
+}
+
+.timeline-container {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 1000px;
+    overflow-x: auto;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    .timeline {
+        display: grid;
+        justify-content: center;
+    }
+}
+
+.main-container {
+    margin-top: 25px;
+    margin-left: $LEFT_MARGIN_MASTER;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    div {
+        margin-top: 25px;
+    }
+}
+
+h2 {
+    font-family: 'Share Tech Mono', monospace;
+}
