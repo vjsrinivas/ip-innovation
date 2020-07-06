@@ -9,6 +9,10 @@ import { ClickableEventComponent } from './widgets/timeline/asset/clickable-even
 import { BarComponent } from './widgets/timeline/asset/bar/bar.component';
 import { TimelineDateComponent } from './widgets/timeline/asset/timeline-date/timeline-date.component';
 import { StickerComponent } from './widgets/sticker/sticker.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { ExportCsvComponent } from './components/export-csv/export-csv.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { StickerComponent } from './widgets/sticker/sticker.component';
     ClickableEventComponent,
     BarComponent,
     TimelineDateComponent,
-    StickerComponent
+    StickerComponent,
+    AdminComponent,
+    ExportCsvComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
