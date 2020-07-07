@@ -4,7 +4,7 @@ import * as moment from 'moment'
 
 export interface ForumEvent{
   name: string
-  date: Date | string | number
+  date: string | Date | number
   description?: string
   type?: string
   presenters?: {name: string, avatar?: string}[]

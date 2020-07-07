@@ -12,6 +12,10 @@ export class HomeComponent implements OnInit {
   events: ForumEvent[]
 
   constructor(private mongo: MongoFunctionsService) {
+    this.mongo.getEvents().subscribe((data: ForumEvent[]) => {
+      console.log(data)
+      this.events = data
+    })
   }
 
   currentStickers = [1,2,3,4,5];
@@ -21,10 +25,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
-    this.mongo.getEvents().subscribe((data: ForumEvent[]) => {
-      console.log(data)
-      this.events = data
-    })
+
   }
 
   // addItem() {
