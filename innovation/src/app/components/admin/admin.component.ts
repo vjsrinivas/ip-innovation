@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
-import { isNgTemplate } from '@angular/compiler';
+import { MongoFunctionsService } from '../../mongo-functions.service';
 
 @Component({
   selector: 'app-admin',
@@ -9,6 +8,7 @@ import { isNgTemplate } from '@angular/compiler';
 })
 export class AdminComponent implements OnInit {
 
+  
 
   userData: any = [
     {name: "Vicki Tang", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
@@ -18,8 +18,8 @@ export class AdminComponent implements OnInit {
     {name: "Tiara Jefferson", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
   ]
 
-  constructor() { 
-    console.log(this.userData);
+  constructor(private mongo: MongoFunctionsService) { 
+    // console.log(this.userData);
     
   }
 
@@ -28,10 +28,22 @@ export class AdminComponent implements OnInit {
     console.log("Searched name: " + this.tcode);
   }
 
+  // data = this.userData.name;
+  myData: any;
+
   ngOnInit() {
+    
+    this.mongo.getUsers().subscribe((res: any) => {
+      //alert("Success");
+      this.myData = res; 
+      // Where you find the array res.data or res.data.data
+      console.log('res is ', res);
+    },
+    error => {
+      alert("ERROR");
+    });
   }
-
-
-
-
+    
 }
+
+
