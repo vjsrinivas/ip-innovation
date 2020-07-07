@@ -23,6 +23,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { EventCreateComponent } from './components/event-create/event-create.component';
 import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { FormsModule } from '@angular/forms';
     MatDividerModule,
     MatCardModule,
     MatTooltipModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [MongoFunctionsService],
   bootstrap: [AppComponent],
