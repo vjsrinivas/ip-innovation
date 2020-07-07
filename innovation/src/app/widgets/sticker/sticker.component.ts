@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'sticker',
@@ -6,8 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sticker.component.scss']
 })
 export class StickerComponent implements OnInit {
+  @Input()
+  srcPath: string;
 
-  constructor() { }
+  @Input()
+  description: string;
+
+  @Input()
+  name: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

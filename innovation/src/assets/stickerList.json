@@ -17,11 +17,11 @@
     {        
         "name": "Into a New Reality",
         "description": "This badge is awarded for people who are able to attend every single AI-related event!",
-        "image": "earth.png"
+        "image": "new_reality.png"
     },
     {        
         "name": "1st Place Winner of the \"Scribble\" Event",
         "description": "This badge is awarded for people who attend the Scribble exercise!",
-        "image": "jupiter.png"
+        "image": "scrabble_winner.png"
     }
 ]
