@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import {MongoFunctionsService} from '../../mongo-functions.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   currentStickers = [1,2,3,4,5];
 
@@ -43,4 +45,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  // addItem() {
+  //   //this.mongo.addEvent(testEvent);
+  //   this.mongo.getEvents();
+  // }
 }

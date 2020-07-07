@@ -16,6 +16,8 @@ import { MatButtonModule } from "@angular/material/button";
 import { EventBoxComponent, EventDialogBox } from './components/event-box/event-box.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TimelineServiceService } from '../app/widgets/timeline/timeline-service.service';
+import { HttpClientModule } from '@angular/common/http';
+import { MongoFunctionsService } from './mongo-functions.service';
 
 @NgModule({
   declarations: [
@@ -36,9 +38,10 @@ import { TimelineServiceService } from '../app/widgets/timeline/timeline-service
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MongoFunctionsService],
   bootstrap: [AppComponent],
   entryComponents: [ClickableEventComponent, TimelineDateComponent, BarComponent, EventDialogBox]
 })
