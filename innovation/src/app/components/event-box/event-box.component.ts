@@ -30,7 +30,7 @@ export class EventBoxComponent implements OnInit {
 
     this.eventinfo = {
       name: this.eventjson.name,
-      date: moment(this.eventjson.date).format('MM/DD h:mm a'),
+      date: moment.default(this.eventjson.date).format('MM/DD h:mm a'),
       description: this.eventjson.description,
       presenters: this.eventjson.presenters,
       badges: this.eventjson.badges,

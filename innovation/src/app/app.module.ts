@@ -21,6 +21,7 @@ import { MongoFunctionsService } from './mongo-functions.service';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from "@angular/material/card";
 import { MatTooltipModule } from "@angular/material/tooltip";
+import { EventCreateComponent } from './components/event-create/event-create.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatTooltipModule } from "@angular/material/tooltip";
     AdminComponent,
     ExportCsvComponent,
     EventBoxComponent,
-    EventDialogBox
+    EventDialogBox,
+    EventCreateComponent
   ],
   imports: [
     BrowserModule,

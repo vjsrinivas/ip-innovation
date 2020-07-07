@@ -54,8 +54,17 @@ var UserSchema = new Schema(
     }
 );
 
+var stickerSchema = new Schema(
+    {
+        name: {type: String},
+        description: {type: String},
+        image: {type:String} // just the image name not the path!
+    }
+);
+
 var eventModel = db.model('event', EventSchema);
 var userModel = db.model('users', UserSchema);
+var stickerModel = db.model('stickers', stickerSchema);
 
 app.post('/api/SaveEvent', function(req,res){
     console.log("SaveEvent post detected");
@@ -115,6 +124,13 @@ app.post('/api/SetUsers', function(req, res) {
 app.post('/api/SetUser', function(req, res) {
     // TODO
     res.send(null);
+});
+
+app.get('/api/GetStickers', function(req, res){
+    console.log("GetStickers get detected");
+    stickerModel.find({}, function(err, doc) {
+        res.send(doc);
+    });
 });
 
 app.listen(8080, function() {
