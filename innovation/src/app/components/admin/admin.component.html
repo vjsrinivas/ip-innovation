@@ -35,8 +35,8 @@
         <tbody>
             <tr *ngFor = "let data of userData">
                 <td> {{data.name}} </td>
-                <td> <input type="checkbox" value="true"> {{data.badge1}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge2}}</td>
+                <td> <input type="checkbox" name ="checkbox" value="true"> {{data.badge1}}</td>
+                <td> <input type="checkbox" name ="checkbox" value="true" > {{data.badge2}}</td>
                 <td> <input type="checkbox" value="true" > {{data.badge3}}</td>
                 <td> <input type="checkbox" value="true" > {{data.badge4}}</td>
                 <td> <input type="checkbox" value="true" > {{data.badge5}}</td>
@@ -49,7 +49,14 @@
             </tr>
 
         </tbody>
-
     </table>
 </div>
 
+<!-- <input type="button" onclick="myFunction()" value="Send order"> -->
+
+<div *ngFor="let d of myData">
+    {{d}}
+</div>
+
+<pre>{{myData | json}}</pre>
+<br><br>
