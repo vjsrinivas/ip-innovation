@@ -4,7 +4,7 @@
         "date": "9/29/2020 9:00 AM EST",
         "description": "Introduction to the Innovation Forum and presenting the speakers",
         "type": "Normal",
-        "presenters": [{"name":"Joe Star", "avatar": "image.png"}],
+        "presenters": [{"name":"Joe Star", "avatar": "../../../assets/person1.jpg"}],
         "connection_type": "Web_Ex",
         "link": "Web_Ex meeting link"
     },
@@ -13,7 +13,7 @@
         "date": "9/29/2020 10:30 AM EST",
         "description": "This is an event will be introducing the Artificial Intelligence Series speakers and events",
         "type": "Speakers",
-        "presenters": [{"name":"Huey Colour", "avatar": "image.png"}],
+        "presenters": [{"name":"Huey Colour", "avatar": "../../../assets/person2.jpg"}],
         "connection_type": "Web_Ex",
         "link": "Web_Ex meeting link"
     },
@@ -22,7 +22,7 @@
         "date": "9/29/2020 12:00 PM EST",
         "description": "This is an event will showcase Artificial Intelligence Series: Impact on Business",
         "type": "speaker",
-        "presenters": [{"name":"Huey Colour", "avatar": "image.png"}],
+        "presenters": [{"name":"Huey Colour", "avatar": "../../../assets/person3.jpg"}],
         "connection_type": "Web_Ex",
         "link": "Web_Ex meeting link"
     },
@@ -31,7 +31,7 @@
         "date": "9/29/2020 1:00 PM EST",
         "description": "This is an event will showcase Artificial Intelligence Series: Image Recognition & Detection",
         "type": "speaker",
-        "presenters": [{"name":"Huey Colour", "avatar": "image.png"}],
+        "presenters": [{"name":"Huey Colour", "avatar": "../../../assets/person1.jpg"}],
         "connection_type": "",
         "link": "Web_Ex meeting link"
     },
@@ -49,7 +49,7 @@
         "date": "9/29/2020 2:30 PM EST",
         "description": "This event will include breakout sessions for attendees to network with other members in other departments",
         "type": "Event",
-        "presenters": [{"name":"Huey Colour", "avatar": "image.png"}],
+        "presenters": [{"name":"Huey Colour", "avatar": "../../../assets/person2.jpg"}],
         "connection_type": "Web_Ex",
         "link": "Web_Ex meeting link"
     },
@@ -58,7 +58,7 @@
         "date": "9/29/2020 3:30 PM EST",
         "description": "This event will give a chance for attendees and the presenters to take pictures together",
         "type": "Event",
-        "presenters": [{"name":"Huey Colour", "avatar": "image.png"}],
+        "presenters": [{"name":"Huey Colour", "avatar": "../../../assets/person3.jpg"}],
         "connection_type": "Web_Ex",
         "link": "Web_ex meeting link"
     },
@@ -67,7 +67,7 @@
         "date": "9/30/2020 10:00 AM EST",
         "description": "Attendees can experience a demo of our Beta VR Innovation forum, also can be used to judge if they like it",
         "type": "Event",
-        "presenters": [{"name":"Huey Colour", "avatar": "image.png"}],
+        "presenters": [{"name":"Huey Colour", "avatar": "../../../assets/person1.jpg"}],
         "connection_type": "Youtube",
         "link": "Youtube link"
     },
@@ -76,7 +76,7 @@
         "date": "9/30/2020 12:00 PM EST",
         "description": "Team building event with Miro",
         "type": "event",
-        "presenters": [{"name":"Huey Colour", "avatar": "image.png"}],
+        "presenters": [{"name":"Huey Colour", "avatar": "../../../assets/person2.jpg"}],
         "connection_type": "Miro",
         "link": "WebEx link"
     },
@@ -85,7 +85,7 @@
         "date": "9/30/2020 1:00 PM EST",
         "description": "This event will use icebreaker activities to have everyone learn more about eachother",
         "type": "Event",
-        "presenters": [{"name":"Huey Colour", "avatar": "image.png"}],
+        "presenters": [{"name":"Huey Colour", "avatar": "../../../assets/person3.jpg"}],
         "connection_type": "Web_Ex",
         "link": "Web_Ex link"
     }
