@@ -19,7 +19,7 @@ export class AdminComponent implements OnInit {
   ]
 
   constructor(private mongo: MongoFunctionsService) { 
-    // console.log(this.userData);
+    console.log(this.userData);
     
   }
 
@@ -34,10 +34,9 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
     
     this.mongo.getUsers().subscribe((res: any) => {
-      //alert("Success");
-      this.myData = res; 
-      // Where you find the array res.data or res.data.data
+      //this.myData = res; 
       console.log('res is ', res);
+      this.myData = res;
     },
     error => {
       alert("ERROR");
