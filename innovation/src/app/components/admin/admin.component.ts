@@ -8,7 +8,7 @@ import { MongoFunctionsService } from '../../mongo-functions.service';
 })
 export class AdminComponent implements OnInit {
 
-  
+  term: string 
 
   userData: any = [
     {name: "Vicki Tang", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},

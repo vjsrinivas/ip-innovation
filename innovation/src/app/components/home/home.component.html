@@ -10,8 +10,8 @@
     </div>
     <div class="main-container">
         <h2>Prize Badges</h2>
-        <div>
-            <sticker *ngFor="let sticker of currentStickers"></sticker>
+        <div *ngIf="stickersLoading">
+            <sticker *ngFor="let sticker of currentStickers" srcPath='../../../assets/{{sticker.image}}' [description]="sticker.description" [name]="sticker.name"></sticker>
         </div>
         <!-- <button (click)="addItem()">Test</button> -->
     </div>

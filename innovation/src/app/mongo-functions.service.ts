@@ -102,4 +102,8 @@ export class MongoFunctionsService {
     console.log('Adding event...');
     return this.http.post('http://localhost:8080/api/SetSticker', stickerObj, httpOptions);
   }
+
+  public getStickers() {
+    return this.http.get('http://localhost:8080/api/GetStickers');
+  }
 }

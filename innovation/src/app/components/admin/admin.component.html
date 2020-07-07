@@ -6,7 +6,7 @@
 
 <div>
     <label >Search</label>
-    <input (input)="tcode=$event.target.value" type="text" placeholder="Search by username" class="form-control">
+    <input [(ngModel)]="term" (input)="tcode=$event.target.value" type="text" placeholder="Search by username" class="form-control">
     <button class="btn btn-success" (click)="submit()">Submit</button>
 </div>
 
@@ -33,7 +33,7 @@
         </thead> 
 
         <tbody>
-            <tr *ngFor = "let data of userData">
+            <tr *ngFor = "let data of userData | filter:term">
                 <td> {{data.name}} </td>
                 <td> <input type="checkbox" [(ngModel)]="data.badge1"> {{data.badge1}}</td>
                 <td> <input type="checkbox" [(ngModel)]="data.badge2"> {{data.badge2}}</td>

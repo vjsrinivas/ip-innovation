@@ -18,14 +18,21 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  currentStickers = [1,2,3,4,5];
+  stickersLoading: boolean = false;
+  currentStickers: any;
 
   // Schema Example for events (will be loaded into by MongoDB)
   // Dates will be Date type for now but might changed to Timestamp when migrating to mongodb
 
 
   ngOnInit() {
-
+    this.mongo.getStickers().subscribe(
+      (val) => {
+        this.currentStickers = val;
+        this.stickersLoading = true;
+        console.log(this.currentStickers);
+      }
+    )
   }
 
   // addItem() {
