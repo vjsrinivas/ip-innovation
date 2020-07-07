@@ -95,12 +95,34 @@ app.post('/api/SaveEvent', function(req,res){
 });
 
 app.get('/api/GetEvents', function(req,res){
-    console.log("GetEvent get detected");
+    console.log("GetEvents get detected");
     eventModel.find({}, function(err, docs) {
-        if(err != null) {
-            res.send(docs);
-        } else {
+        if(err) {
             res.send(err);
+        } else {
+            res.send(docs);
+        }
+    });
+});
+
+app.post('/api/DeleteEvent', function(req, res) {
+    console.log('Deleting' + req.body._id);
+    eventModel.find({_id: req.body._id}).remove(function(err, data) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
+    });
+});
+
+app.post('/api/DeleteEvents', function(req, res) {
+    console.log('Deleting all');
+    eventModel.find({}).remove(function(err, data) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(data);
         }
     });
 });
@@ -108,10 +130,10 @@ app.get('/api/GetEvents', function(req,res){
 app.get('/api/GetUsers', function(req, res) {
     console.log("GetUsers get detected");
     userModel.find({}, function(err, docs) {
-        if(err != null) {
-            res.send(docs);
-        } else {
+        if(err) {
             res.send(err);
+        } else {
+            res.send(docs);
         }
     });
 });
@@ -129,7 +151,11 @@ app.post('/api/SetUser', function(req, res) {
 app.get('/api/GetStickers', function(req, res){
     console.log("GetStickers get detected");
     stickerModel.find({}, function(err, doc) {
-        res.send(doc);
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(doc);
+        }
     });
 });
 

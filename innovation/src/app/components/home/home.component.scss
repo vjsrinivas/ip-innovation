@@ -1,13 +1,15 @@
 $LEFT_MARGIN_MASTER: 7%;
 
 h1 {
-    font-family: 'Share Tech Mono', monospace !important;
+    font-family: "Share Tech Mono", monospace !important;
+    font-weight: 900;
+    margin-bottom: 5px;
 }
 
 .content-master {
     display: grid;
     grid-template-columns: 75% 25%;
-    grid-template-rows: 75px auto;
+    grid-template-rows: 144px auto;
     color: white !important;
     // height: 100vh;
 }
@@ -18,6 +20,16 @@ h1 {
     grid-row-start: 1;
     grid-row-end: 1;
     margin-left: $LEFT_MARGIN_MASTER;
+
+    h3 {
+        padding: 9px 19px;
+        background-color: white;
+        color: black;
+        margin: 0;
+        width: 274px;
+        font-family: "Share Tech Mono", monospace;
+        font-weight: 100;
+    }
 }
 
 .timeline-container::-webkit-scrollbar {
