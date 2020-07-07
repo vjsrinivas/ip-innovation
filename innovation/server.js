@@ -51,7 +51,7 @@ var UserSchema = new Schema(
         badge8: {type: Boolean},
         badge9: {type: Boolean},
         badge10: {type: Boolean}
-    }
+    }, {versionKey: false}
 );
 
 var stickerSchema = new Schema(
@@ -59,13 +59,14 @@ var stickerSchema = new Schema(
         name: {type: String},
         description: {type: String},
         image: {type:String} // just the image name not the path!
-    }
+    }, {versionKey: false}
 );
 
 var eventModel = db.model('event', EventSchema);
 var userModel = db.model('users', UserSchema);
 var stickerModel = db.model('stickers', stickerSchema);
 
+// Events:
 app.post('/api/SaveEvent', function(req,res){
     console.log("SaveEvent post detected");
     var mod = new eventModel(req.body);
@@ -106,7 +107,7 @@ app.get('/api/GetEvents', function(req,res){
 });
 
 app.post('/api/DeleteEvent', function(req, res) {
-    console.log('Deleting' + req.body._id);
+    console.log('Deleting ' + req.body._id);
     eventModel.find({_id: req.body._id}).remove(function(err, data) {
         if(err) {
             res.send(err);
@@ -127,6 +128,9 @@ app.post('/api/DeleteEvents', function(req, res) {
     });
 });
 
+
+
+// Users:
 app.get('/api/GetUsers', function(req, res) {
     console.log("GetUsers get detected");
     userModel.find({}, function(err, docs) {
@@ -145,9 +149,56 @@ app.post('/api/SetUsers', function(req, res) {
 
 app.post('/api/SetUser', function(req, res) {
     // TODO
-    res.send(null);
+    console.log("SetUser post detected");
+    var mod = new userModel(req.body);
+
+    console.log(req.headers.mode);
+    if(req.headers.mode == 'add') {
+        console.log('Saving mode...');
+        mod.save(function(err, data){
+            if (err) {
+                res.send(err);
+            } else {
+                res.send({data: 'Record has been inserted'});
+            }
+        });
+    } else {
+        console.log('Updating mode...');
+        userModel.findByIdAndUpdate(req.body.id, req.body,
+            function(err, data) {
+                if(err) {
+                    res.send(err);
+                } else {
+                    res.send({data: 'Record has been updated'});
+                }
+            }
+        )
+    }
 });
 
+app.post('/api/DeleteUser', function(req, res) {
+    console.log('Deleting ' + req.body._id);
+    userModel.find({_id: req.body._id}).remove(function(err, data) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
+    });
+});
+
+app.post('/api/DeleteUsers', function(req,res) {
+    console.log('Deleting all users');
+    userModel.find({}).remove(function(err, data) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
+    });
+});
+
+// Stickers:
 app.get('/api/GetStickers', function(req, res){
     console.log("GetStickers get detected");
     stickerModel.find({}, function(err, doc) {
@@ -158,6 +209,45 @@ app.get('/api/GetStickers', function(req, res){
         }
     });
 });
+
+app.post('/api/DeleteStickers', function(req, res) {
+    stickerModel.find({}).remove(function(err, data) {
+        if(err) {
+            res.send(err);
+        } else {
+            res.send(data);
+        }
+    });
+});
+
+app.post('/api/SetSticker', function(req, res) {
+    console.log("SetUser post detected");
+    var mod = new stickerModel(req.body);
+
+    console.log(req.headers.mode);
+    if(req.headers.mode == 'add') {
+        console.log('Saving mode...');
+        mod.save(function(err, data){
+            if (err) {
+                res.send(err);
+            } else {
+                res.send({data: 'Record has been inserted'});
+            }
+        });
+    } else {
+        console.log('Updating mode...');
+        stickerModel.findByIdAndUpdate(req.body.id, req.body,
+            function(err, data) {
+                if(err) {
+                    res.send(err);
+                } else {
+                    res.send({data: 'Record has been updated'});
+                }
+            }
+        )
+    }
+});
+
 
 app.listen(8080, function() {
     console.log('Express server is running on port 8080...');
