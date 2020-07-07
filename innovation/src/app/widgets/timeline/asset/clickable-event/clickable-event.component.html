@@ -1,5 +1,5 @@
 <div class="bar"></div>
-<a (click)="eBox.openDialog()"><div class="click">
+<a (click)="eBox.openDialog()" matTooltip="{{eventInstance.name}}" matTooltipPosition="left"><div class="click">
     <app-event-box #eBox [eventjson]="eventInstance"></app-event-box>
 </div></a>
 <!-- <div class="bar"></div> -->
