@@ -22,6 +22,7 @@ export class TimelineComponent implements OnInit {
     let _days = [];
     let _time_between_events = []
     let _prevDate: Date = undefined;
+    if(this.eventList != null || this.eventList != undefined){
     this.eventList.forEach(event => {
       const _date: Date = event['date']
       if(_prevDate != undefined) {
@@ -35,6 +36,7 @@ export class TimelineComponent implements OnInit {
       _days.push(_dateBuild);
       _prevDate = _date; 
     });
+    }
 
     console.log(_days);
     console.log(_time_between_events);
