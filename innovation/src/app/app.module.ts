@@ -18,6 +18,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { TimelineServiceService } from '../app/widgets/timeline/timeline-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MongoFunctionsService } from './mongo-functions.service';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from "@angular/material/card";
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { MongoFunctionsService } from './mongo-functions.service';
     BrowserAnimationsModule,
     MatButtonModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDividerModule,
+    MatCardModule,
+    MatTooltipModule
   ],
   providers: [MongoFunctionsService],
   bootstrap: [AppComponent],

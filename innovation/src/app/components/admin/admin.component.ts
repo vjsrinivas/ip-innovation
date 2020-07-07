@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
+import { isNgTemplate } from '@angular/compiler';
 
 @Component({
   selector: 'app-admin',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit {
+
 
   userData: any = [
     {name: "Vicki Tang", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
@@ -17,9 +20,13 @@ export class AdminComponent implements OnInit {
 
   constructor() { 
     console.log(this.userData);
+    
   }
 
-  
+  tcode : string;
+  submit() {
+    console.log("Searched name: " + this.tcode);
+  }
 
   ngOnInit() {
   }

@@ -3,8 +3,14 @@
 <!--img src="../../../assets/IP_Logo.png" alt="IP" sizes="30px"-->
 <br>
 
-<input type="text" placeholder="Search by username">
 
+<div>
+    <label >Search</label>
+    <input (input)="tcode=$event.target.value" type="text" placeholder="Search by username" class="form-control">
+    <button class="btn btn-success" (click)="submit()">Submit</button>
+</div>
+
+<br>
 
 <div>
     <table>
@@ -29,7 +35,7 @@
         <tbody>
             <tr *ngFor = "let data of userData">
                 <td> {{data.name}} </td>
-                <td> <input type="checkbox" value="true" > {{data.badge1}}</td>
+                <td> <input type="checkbox" value="true"> {{data.badge1}}</td>
                 <td> <input type="checkbox" value="true" > {{data.badge2}}</td>
                 <td> <input type="checkbox" value="true" > {{data.badge3}}</td>
                 <td> <input type="checkbox" value="true" > {{data.badge4}}</td>
@@ -46,3 +52,4 @@
 
     </table>
 </div>
+
