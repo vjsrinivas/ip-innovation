@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog'
+import * as moment from 'moment'
 
 export interface ForumEvent{
   name: string
@@ -8,6 +9,8 @@ export interface ForumEvent{
   type?: string
   presenters?: {name: string, avatar?: string}[]
   connection_type?: string
+  badges?: {name:string, src:string}[]
+  link?: string
 }
 
 @Component({
@@ -27,19 +30,19 @@ export class EventBoxComponent implements OnInit {
 
     this.eventinfo = {
       name: this.eventjson.name,
-      date: this.eventjson.date,
+      date: moment(this.eventjson.date).format('MM/DD h:mm a'),
       description: this.eventjson.description,
-      presenters: this.eventjson.presenters
+      presenters: this.eventjson.presenters,
+      badges: this.eventjson.badges,
+      link: this.eventjson.link
     }
 
-
     const dialogRef = this.dialog.open(EventDialogBox,{
-      width: '250px',
+      width: '600px',
       data: this.eventinfo
     })
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('dialog done')
     })
   }
 

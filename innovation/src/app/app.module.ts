@@ -16,6 +16,9 @@ import { MatButtonModule } from "@angular/material/button";
 import { EventBoxComponent, EventDialogBox } from './components/event-box/event-box.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TimelineServiceService } from '../app/widgets/timeline/timeline-service.service';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from "@angular/material/card";
+import { MatTooltipModule } from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { TimelineServiceService } from '../app/widgets/timeline/timeline-service
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule,
+    MatCardModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent],
