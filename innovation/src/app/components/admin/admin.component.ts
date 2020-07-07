@@ -13,7 +13,6 @@ export class AdminComponent implements OnInit {
     {name: "Vishal Aiely", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
     {name: "Khiliel Bullock", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
     {name: "Tiara Jefferson", badge1: false, badge2: false, badge3: false, badge4: false, badge5: false, badge6: false, badge7: false, badge8: false, badge9: false, badge10: false},
-  
   ]
 
   constructor() { 
