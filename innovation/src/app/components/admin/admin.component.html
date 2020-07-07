@@ -35,16 +35,16 @@
         <tbody>
             <tr *ngFor = "let data of userData">
                 <td> {{data.name}} </td>
-                <td> <input type="checkbox" name ="checkbox" value="true"> {{data.badge1}}</td>
-                <td> <input type="checkbox" name ="checkbox" value="true" > {{data.badge2}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge3}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge4}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge5}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge6}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge7}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge8}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge9}}</td>
-                <td> <input type="checkbox" value="true" > {{data.badge10}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge1"> {{data.badge1}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge2"> {{data.badge2}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge3"> {{data.badge3}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge4"> {{data.badge4}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge5"> {{data.badge5}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge6"> {{data.badge6}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge7"> {{data.badge7}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge8"> {{data.badge8}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge9"> {{data.badge9}}</td>
+                <td> <input type="checkbox" [(ngModel)]="data.badge10"> {{data.badge10}}</td>
 
             </tr>
 

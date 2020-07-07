@@ -22,6 +22,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from "@angular/material/card";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { EventCreateComponent } from './components/event-create/event-create.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { EventCreateComponent } from './components/event-create/event-create.com
     HttpClientModule,
     MatDividerModule,
     MatCardModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule
   ],
   providers: [MongoFunctionsService],
   bootstrap: [AppComponent],

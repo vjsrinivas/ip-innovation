@@ -33,11 +33,16 @@ export class EventCreateComponent implements OnInit {
     // delete stuff first:
     this.mongo.getEvents().subscribe(
       (oldEvents: any[]) => {
-        oldEvents.forEach(oldEvent => {
-          this.mongo.deleteEvent(oldEvent._id).subscribe(
-            (data) => {console.log(data);}
-          );
-        });
+        
+        if(oldEvents != null) {
+          oldEvents.forEach(oldEvent => {
+            if(oldEvent != null) {
+              this.mongo.deleteEvent(oldEvent._id).subscribe(
+                (data) => {console.log(data);}
+              );
+            }
+          });
+        }
 
         _events.forEach(event => {
           this.mongo.addEvent(event).subscribe(
