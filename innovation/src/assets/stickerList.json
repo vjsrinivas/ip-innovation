@@ -1,0 +1,27 @@
+[
+    {        
+        "name": "In Earth's Orbit",
+        "description": "This badge is awarded for people who attend the first event of the conference!",
+        "image": "earth.png"
+    },
+    {        
+        "name": "Lovely Cooperation",
+        "description": "This badge is awarded to people who attend the cooperative workshop seminar!",
+        "image": "venus.png"
+    },
+    {        
+        "name": "The \"Big Data\" Hole",
+        "description": "This badge is awarded for people who attend the \"Big Data\" event!",
+        "image": "blackhole.png"
+    },
+    {        
+        "name": "Into a New Reality",
+        "description": "This badge is awarded for people who are able to attend every single AI-related event!",
+        "image": "new_reality.png"
+    },
+    {        
+        "name": "1st Place Winner of the \"Scribble\" Event",
+        "description": "This badge is awarded for people who attend the Scribble exercise!",
+        "image": "scrabble_winner.png"
+    }
+]

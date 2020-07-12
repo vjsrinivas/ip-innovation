@@ -1,0 +1,34 @@
+h1{
+    color: white;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table th{
+    text-align: left;
+    background-color: #3a6070;
+    color:white;
+    padding: 5px 40px 5px 10px;
+}
+
+table td{
+    border: 1px solid #e3e3e3;
+    padding: 5px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table tr:nth-child(odd) td{
+    background-color: #e2ebf0; 
+}
+
+table tr:nth-child(even) td{
+    background-color: #b3e1f8; 
+}
+
+search{
+    margin: 15px;
+    padding: 15px ;
+}

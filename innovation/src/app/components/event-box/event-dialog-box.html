@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+<style>
+    div {
+    font-family: 'Rubik', sans-serif;
+    }
+</style>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+    <h4>{{data.date}}</h4>
+    <p>{{data.description}}</p>
+    <h4>Presenters:</h4>
+    <span *ngFor="let presenter of data.presenters" style="padding-right:3px; padding-top: 3px;">
+        <img matTooltip={{presenter.name}} matTooltipPosition='below' src={{presenter.avatar}} alt="Avatar" style="border-radius: 60%; height: 60px; width:60px;">
+    </span>
+    <br>
+    <h4>Badges:</h4>
+    <!-- <div class='badges'>
+        <img matTooltip='Blackhole Badge' src='../../../assets/blackhole.png' alt="Avatar" style="border-radius: 50%; height: 60px; width:60px;">
+        <img matTooltip='Earth Badge' src='../../../assets/earth.png' alt="Avatar" style="border-radius: 50%; height: 60px; width:60px;">
+    </div> -->
+    <span *ngFor="let badge of data.badges">
+        <img matTooltip={{badge.name}} src={{badge.src}} alt="Avatar" style="border-radius: 50%; height: 60px; width:60px;"> 
+    </span>
+</div>
+<mat-dialog-actions align="start">
+    <a mat-button href="{{data.link}}" color="primary" target="_blank">Join</a>
+    <button mat-button (click)="onNoClick()">Back</button>
+</mat-dialog-actions>

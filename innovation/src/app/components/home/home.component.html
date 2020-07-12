@@ -1,0 +1,18 @@
+<div class="content-master">
+    <div class="top-row">
+        <h1>International Paper - Innovation Forum 2020</h1>
+        <h3>Innovating Into the Unknown</h3>
+    </div>
+    <div class="timeline-container">
+        <div class="timeline">
+            <timeline [eventList]="events"></timeline>
+        </div>
+    </div>
+    <div class="main-container">
+        <h2>Prize Badges</h2>
+        <div *ngIf="stickersLoading">
+            <sticker *ngFor="let sticker of currentStickers" srcPath='../../../assets/{{sticker.image}}' [description]="sticker.description" [name]="sticker.name"></sticker>
+        </div>
+        <!-- <button (click)="addItem()">Test</button> -->
+    </div>
+</div>
